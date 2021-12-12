@@ -57,6 +57,12 @@ class UI{
                             <td><button class="btn btn-danger delete">X</button></td>
                         `;
     }
+   static clearInput(){
+        //Selects all the inputs
+        const inputs = document.querySelectorAll('.form-control');
+        //Clear the content of each input
+        inputs.forEach((input)=>input.value="");
+    }
     static deleteEntry(target){
         if(target.classList.contains('delete')){
             target.parentElement.parentElement.remove();
